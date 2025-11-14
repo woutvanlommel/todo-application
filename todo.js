@@ -66,12 +66,17 @@ function addTodo() {
     
     // .trim() verwijdert spaties aan het begin en einde
     const taskText = todoInput.value.trim(); 
+    const alertText = document.getElementById('alertText')
 
     // Validatie: stop als het veld leeg is
     if (taskText === '') {
-        alert('Vul een taak in.');
+        alertText.classList.remove('invisible');
+        // alertText.innerHTML = `Vul een taak in`;
+        // alert('Vul een taak in.');
         return; // Stopt de functie hier
     }
+
+    alertText.classList.add('invisible');
 
     // Haal de HUIDIGE lijst met taken op (stap 1 & 2 uit je plan)
     const todos = getTodosFromStorage();
