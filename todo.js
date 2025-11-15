@@ -160,7 +160,7 @@ function displayTodos() {
             
             // 1. Maak de HTML-elementen in het geheugen
             const li = document.createElement('li');
-            li.className = 'border-b border-gray-200 p-2 flex justify-between items-center';
+            li.className = 'border-b border-blue-200 p-2 flex justify-between items-center';
 
             // 2. Maak de tekst-span
             const span = document.createElement('span');
